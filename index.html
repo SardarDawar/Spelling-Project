@@ -287,35 +287,35 @@ draft: false
       },
     });
 
-
-     //Json Javascript notation
-     const url = `https://sheetsu.com/apis/v1.0su/aac2f3261387`;
-     fetch(url)
-     .then(response => response.json())
-     .then(data =>{
-      function random_item(items)
-        {
-        return items[Math.floor(Math.random()*items.length)];
-        }
-        var items =data;
-        let a = random_item(items)
-        console.log(a.message);
-        var  temp = "";
-        temp += "<td>"+ a.message +"</td>"
-        document.getElementById("victory-text").innerHTML = temp;
-        
-       if(data.length > 0){
-            var  temp = "";
-            data1 =   data
-           data1.forEach((u,index) => {
-              if (index==0){
-                temp += "<td>"+ u.message +"</td>"
-              }
-            })
-            document.getElementById("victory-text").innerHTML = temp;
+    //Json Javascript notation
+    const url = `https://sheetsu.com/apis/v1.0su/aac2f3261387`;
+    fetch(url)
+    .then(response => response.json())
+    .then(data =>{
+    // rendomly  shows
+    function random_item(items)
+      {
+      return items[Math.floor(Math.random()*items.length)];
+      }
+      var items =data;
+      let a = random_item(items)
+      console.log(a.message);
+      var  temp = "";
+      temp += "<td>"+ a.message +"</td>"
+      document.getElementById("victory-text").innerHTML = temp;
+      
+      //only show at a time
+      /*if(data.length > 0){
+          var  temp = "";
+          data1 =   data
+          data1.forEach((u,index) => {
+            if (index==0){
+              temp += "<td>"+ u.message +"</td>"
             }
-          })     
-
+          })
+          document.getElementById("victory-text").innerHTML = temp;
+          }*/
+        })      
   </script>
 </body>
 

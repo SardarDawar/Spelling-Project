@@ -1,6 +1,6 @@
 // Define variables for ranking.
-let LEVEL_PERCENTS = [ 0];
-// let LEVEL_PERCENTS = [0.7, 0.55, 0.4, 0.25, 0.2, 0.15, 0.1, 0.05, 0];
+let LEVEL_PERCENTS = [0.7, 0.55, 0.4, 0.25, 0.2, 0.15, 0.1, 0.05, 0];
+// let LEVEL_PERCENTS = [0];
 let LEVEL_NAMES = [
   "Genius",
   "Exceptional",
@@ -601,7 +601,6 @@ function setUpPrevPopup() {
   element("prev-stats-points").textContent = prev_points;
 
   // Set up found words and points, if present.
-  // if (prev_entered_array.length > 0) {
   if (prev_entered_array.length > 0) {
     element("prev-stats-words-found").textContent =
       prev_entered_array.length + " of ";
@@ -751,32 +750,30 @@ function hideAllPopup() {
   setBlur(false);
 }
 
-
 // Toggle dark mode.
 // function toggleDarkMode() {
-//   // document.body.classList.add("dark");
-//   //   element("toggle-dark").textContent = "";
-//       setDarkCookie();
+//   if (document.body.classList.contains("dark")) {
+//     document.body.classList.remove("dark");
+//     element("toggle-dark").textContent = "dark";
+//     setDarkCookie();
+//   } else {
+//     document.body.classList.add("dark");
+//     element("toggle-dark").textContent = "light";
+//     setDarkCookie();
+//   }
 // }
+
 // Switch dark mode.
 function switchDarkMode(param) {
-  // document.body.classList.add("dark");
-  //   element("toggle-dark").textContent = "";
-    // setDarkCookie();
-}
-
-
-function darkMode() {
-  var element = document.body;
-  var content = document.getElementById("DarkModetext");
-  element.className = "dark-mode";
-  content.innerText = "Dark Mode is ON";
-}
-function lightMode() {
-  var element = document.body;
-  var content = document.getElementById("DarkModetext");
-  element.className = "light-mode";
-  content.innerText = "Dark Mode is OFF";
+  // if (param == "light") {
+  //   document.body.classList.remove("dark");
+  //   element("toggle-dark").textContent = "dark";
+  //   setDarkCookie();
+  // } else if (param == "dark") {
+  //   document.body.classList.add("dark");
+  //   element("toggle-dark").textContent = "light";
+  //   setDarkCookie();
+  // }
 }
 
 // Doot
